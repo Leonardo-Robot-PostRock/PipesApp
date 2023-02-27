@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 // PrimeNg
 import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {ButtonModule} from 'primeng/button';
   ],
   imports: [
     BrowserModule,
-    ButtonModule
+    ButtonModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
