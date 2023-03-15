@@ -22,12 +22,15 @@
 </div>
 
 <div class="text-layout">
-  <h1>Date | Fecha | Pipe</h1>
-  <p>Pipe para mostrar fechas.</p>
+    <div class="col-12">
+
+        <h1>Date ¤ Fecha ¤ Pipe</h1>
+        <p>Pipe para mostrar fechas.</p>
+    </div>
 </div>
 
-<div class="grid justify-content-center">
-  <div class="col-6 min-w-min">
+<div class="grid justify-content-center min-w-min">
+  <div class="col-12 md:col-6 min-w-min">
     <p-card>
       <ul class="list-decimal">
         <li>fecha</li>
@@ -37,11 +40,17 @@
         <li>fecha | date:'MMMM'</li>
         <li>fecha | date:'MMMM dd, yyyy'</li>
         <li>fecha | date : 'h:mm:ss y'</li>
+      </ul>
 
+      <hr />
+      <ul class="list-decimal">
+        <li>fecha | date: 'long':'GMT-6'</li>
+        <li>fecha | date: 'long':'GMT-4'</li>
+        <li>fecha | date: 'long':'':'fr'</li>
       </ul>
     </p-card>
   </div>
-  <div class="col-6 min-w-min">
+  <div class="col-12 md:col-6 min-w-min">
     <p-card>
       <ul class="list-decimal">
         <li>{{ fecha }}</li>
@@ -51,6 +60,13 @@
         <li>{{ fecha | date : 'MMMM' }}</li>
         <li>{{ fecha | date : 'MMMM dd, yyyy' }}</li>
         <li>{{ fecha | date : 'h:mm:ss y' }}</li>
+      </ul>
+      
+      <hr>
+      <ul class="list-decimal">
+          <li>{{fecha | date: 'long':'GMT-6'}}</li>
+          <li>{{fecha | date: 'long':'GMT-4'}}</li>
+          <li>{{fecha | date: 'long':'':'fr'}}</li>
       </ul>
     </p-card>
   </div>
