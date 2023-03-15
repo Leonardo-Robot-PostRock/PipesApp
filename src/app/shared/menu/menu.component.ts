@@ -19,7 +19,8 @@ export class MenuComponent implements OnInit {
         items: [
           { label: 'Textos y Fechas', icon: 'pi pi-calendar-plus', routerLink: '/' },
           { label: 'Números', icon: 'pi pi-dollar', routerLink: 'numeros' },
-          { label: 'No comunes', icon: 'pi pi-globe', routerLink: 'no-comunes' }
+          { label: 'No comunes', icon: 'pi pi-globe', routerLink: 'no-comunes' },
+          { label: 'Ordenar', icon: 'pi pi-sort-alpha-up-alt', routerLink: 'ordenar' }
         ]
       },
       {
