@@ -32,4 +32,11 @@ export class NoComunesComponent {
   deleteCustomer() {
     this.customer.pop();
   }
+
+  //KeyValue Pipe
+  people = {
+    name: 'Leonardo',
+    age: 28,
+    adress: 'Mendoza, Argentina'
+  }
 }
