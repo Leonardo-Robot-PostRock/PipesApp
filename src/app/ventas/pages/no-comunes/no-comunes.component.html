@@ -53,13 +53,19 @@
   </div>
 
   <div class="col md:col-6 sm:col-9">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
-      <ul>
-        <li *ngFor="let item of people | keyvalue">
-          <b> {{ item.key | titlecase }}: </b>
-          {{ item.value }}
-        </li>
-      </ul>
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre>{{ heroes | json }}</pre>
     </p-fieldset>
   </div>
+</div>
+
+<div class="col md:col-6 sm:col-9">
+  <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+    <ul>
+      <li *ngFor="let item of people | keyvalue">
+        <b> {{ item.key | titlecase }}: </b>
+        {{ item.value }}
+      </li>
+    </ul>
+  </p-fieldset>
 </div>
