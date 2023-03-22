@@ -20,6 +20,7 @@
       ></button>
     </p-fieldset>
   </div>
+
   <div class="col md:col-6 sm:col-9">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
       <p>At the moment {{ customer.length | i18nPlural : customersMap }}</p>
@@ -33,6 +34,7 @@
       ></button>
     </p-fieldset>
   </div>
+
   <div class="col md:col-6 sm:col-9">
     <p-fieldset legend="Slice Pipe" [toggleable]="true">
       <b>Original</b>
@@ -47,6 +49,17 @@
       <pre>{{ customer | slice : 3 : 4 }}</pre>
       <b>Slice:0:4</b>
       <pre>{{ name | slice : 0 : 3 }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col md:col-6 sm:col-9">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of people | keyvalue">
+          <b> {{ item.key | titlecase }}: </b>
+          {{ item.value }}
+        </li>
+      </ul>
     </p-fieldset>
   </div>
 </div>
