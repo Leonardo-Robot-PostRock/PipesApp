@@ -13,15 +13,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'numeros',
+    path: 'numbers',
     component: NumerosComponent
   },
   {
-    path: 'ordenar',
+    path: 'order',
     component: OrdenarComponent
   },
   {
-    path: 'no-comunes',
+    path: 'no-common',
     component: NoComunesComponent
   },
   {
