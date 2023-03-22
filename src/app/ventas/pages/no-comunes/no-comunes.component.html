@@ -1,19 +1,36 @@
 <div class="text-layout">
-  <h1>Pipes no tan comunes</h1>
-  <p>Pipes incluidos en Angualar - Usualmente en el Common Module</p>
+  <h1></h1>
+  <p>Pipes includes in Angular - Usually in the Common Module</p>
 </div>
 
 <div class="grid">
   <div class="col md:col-6 sm:col-9">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-      Saludos {{ name }}, es un placer
-      {{ gender | i18nSelect : invitationMap }}
-      a nuestro evento
+      <p>
+        Grettings {{ name }}, is a pleasure
+        {{ gender | i18nSelect : invitationMap }}
+        to our events.
+      </p>
+      <button
+        pButton
+        class="p-button-secondary p-button-outlined p-button-rounded"
+        icon="pi pi-pencil"
+        label="Change people"
+        (click)="changeCustomer()"
+      ></button>
     </p-fieldset>
   </div>
   <div class="col md:col-6 sm:col-9">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
-      Actualmente {{ customer.length | i18nPlural : customersMap }} .
+      <p>At the moment {{ customer.length | i18nPlural : customersMap }}</p>
+      <button
+        pButton
+        (click)="deleteCustomer()"
+        class="p-button-danger p-button-rounded"
+        icon="pi pi-trash"
+        type="button"
+        label="Delete Customer"
+      ></button>
     </p-fieldset>
   </div>
 </div>
