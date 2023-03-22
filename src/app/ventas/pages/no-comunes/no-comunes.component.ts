@@ -8,19 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class NoComunesComponent {
   // i18nSelect
   name: string = 'Malala Yousafzai';
-  gender: string = 'femenino';
+  gender: string = 'female';
 
-  invitationMap = {
-    male: 'invitarlo',
-    female: 'invitarla'
+  invitationMap: { [k: string]: string } = {
+    'male': 'invite his',
+    'female': 'invite her'
   };
 
   // i18nPlural
-  customer: string[] = ['Maria', 'Norberto', 'Perez'];
+  customer: string[] = ['Maria', 'Norberto', 'Perez', 'Hanna', 'Chris'];
   customersMap: { [k: string]: string } = {
-    '=0': 'no tenemos ningún cliente esperando.',
-    '=1': 'tenemos un cliente esperando',
-    '=2': 'tenemos 2 clientes esperando',
-    other: 'tenemos # clientes esperando'
+    '=0': 'we \don\'t\ have customers waiting.',
+    '=1': 'we have a 1 customer waiting.',
+    '=2': 'we have a 2 customers waiting.',
+    'other': 'we have a # customers waiting.'
   };
+
+  changeCustomer() {
+    this.name = 'Lionel Messi';
+    this.gender = 'male';
+  }
+
+  deleteCustomer() {
+    this.customer.pop();
+  }
 }
