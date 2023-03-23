@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -11,17 +12,17 @@ export class NoComunesComponent {
   gender: string = 'female';
 
   invitationMap: { [k: string]: string } = {
-    'male': 'invite his',
-    'female': 'invite her'
+    male: 'invite his',
+    female: 'invite her'
   };
 
   // i18nPlural
   customer: string[] = ['Maria', 'Norberto', 'Perez', 'Hanna', 'Chris'];
   customersMap: { [k: string]: string } = {
-    '=0': 'we \don\'t\ have customers waiting.',
+    '=0': "we don't have customers waiting.",
     '=1': 'we have a 1 customer waiting.',
     '=2': 'we have a 2 customers waiting.',
-    'other': 'we have a # customers waiting.'
+    other: 'we have a # customers waiting.'
   };
 
   changeCustomer() {
@@ -38,5 +39,30 @@ export class NoComunesComponent {
     name: 'Leonardo',
     age: 28,
     adress: 'Mendoza, Argentina'
-  }
+  };
+
+  //Json Pipe
+  heroes = [
+    {
+      name: 'Superman',
+      fly: true
+    },
+    {
+      name: 'Robin',
+      fly: false
+    },
+    {
+      name: 'Aquaman',
+      fly: false
+    }
+  ];
+
+  // Async Pipe
+  myObservable = interval(5000); //0,1,2,3,4,5,6,
+
+  valuePromise = new Promise((resovle, reject) => {
+    setTimeout(() => {
+      resovle('Tenemos data de promesa');
+    }, 3500);
+  });
 }
