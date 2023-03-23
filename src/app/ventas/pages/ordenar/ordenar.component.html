@@ -1,4 +1,5 @@
 <div class="text-layout">
   <h1>Custom Pipes</h1>
-  <p>Pipes created for {{ 'us' | capitalLetters }}</p>
+  <p>Pipes created by {{ 'us' | capitalLetters : inCapitalLetter }}</p>
+  <button pButton label="toggle capitals" (click)="changeLetters()" type="button"></button>
 </div>
