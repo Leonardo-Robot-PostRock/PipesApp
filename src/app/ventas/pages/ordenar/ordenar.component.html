@@ -3,7 +3,7 @@
   <p>Pipes created by {{ 'us' | capitalLetters : inCapitalLetter }}</p>
 </div>
 
-<p-toolbar [style]="{'min-width': '280px'}">
+<p-toolbar [style]="{ 'min-width': '280px' }">
   <div class="p-toolbar-group-left"></div>
   <div class="grid justify-content-end p-toolbar-group-right min-w-full">
     <button
@@ -42,7 +42,7 @@
       <ng-template pTemplate="body" let-heroe>
         <tr>
           <td>{{ heroe.name }}</td>
-          <td>{{ heroe.fly }}</td>
+          <td>{{ heroe.fly | fly | titlecase }}</td>
           <td>{{ heroe.colour }}</td>
         </tr>
       </ng-template>
