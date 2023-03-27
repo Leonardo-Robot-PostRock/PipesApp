@@ -8,6 +8,7 @@ import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { CapitalLettersPipe } from './pipes/capitalLetters.pipe';
+import { FlyPipe } from './pipes/fly.pipe';
 
 
 
@@ -17,7 +18,8 @@ import { CapitalLettersPipe } from './pipes/capitalLetters.pipe';
     NoComunesComponent,
     BasicosComponent,
     OrdenarComponent,
-    CapitalLettersPipe
+    CapitalLettersPipe,
+    FlyPipe
   ],
   exports:[
     NumerosComponent,
