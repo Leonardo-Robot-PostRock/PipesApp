@@ -5,10 +5,18 @@ import { Heroe } from '../interfaces/ventas.interefaces';
   name: 'order'
 })
 export class OrderPipe implements PipeTransform {
-  transform(heroes: Heroe[]): Heroe[] {
-    heroes = heroes.sort(function (a, b) {
-      return a.name > b.name ? 1 : -1;
-    });
-    return heroes;
+  transform(heroes: Heroe[], orderBy: string = 'valueless'): Heroe[] {
+    console.log(orderBy);
+
+    switch (orderBy) {
+      case 'name':
+        return heroes.sort((a, b) => (a.name > b.name ? 1 : -1));
+      case 'fly':
+        return heroes.sort((a, b) => (a.fly > b.fly ? -1 : 1));
+      case 'colour':
+        return heroes.sort((a, b) => (a.colour > b.colour ? 1 : -1));
+      default:
+        return heroes;
+    }
   }
 }
