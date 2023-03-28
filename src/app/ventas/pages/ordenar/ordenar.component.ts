@@ -8,6 +8,7 @@ import { Colour, Heroe } from '../../interfaces/ventas.interefaces';
 })
 export class OrdenarComponent {
   inCapitalLetter: boolean = true;
+  orderBy: string = '';
 
   heroes: Heroe[] = [
     {
@@ -39,5 +40,9 @@ export class OrdenarComponent {
 
   changeLetters() {
     this.inCapitalLetter = !this.inCapitalLetter;
+  }
+
+  changeOrder(value: string){
+    this.orderBy = value;
   }
 }
