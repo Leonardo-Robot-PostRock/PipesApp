@@ -13,25 +13,33 @@
       type="button"
       class="m-1 p-button-warning col-10 sm:col-8 md:col-3 lg:col-2"
     ></button>
-    <button pButton icon="pi pi-sort" label="For name" class="m-1 col-10 sm:col-8 md:col-3 lg:col-2"></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="For name"
+      class="m-1 col-10 sm:col-8 md:col-3 lg:col-2"
+      (click)="changeOrder('name')"
+    ></button>
     <button
       pButton
       icon="pi pi-sort"
       label="Fly"
       class="m-1 p-button-success col-10 sm:col-8 md:col-3 lg:col-2"
+      (click)="changeOrder('fly')"
     ></button>
     <button
       pButton
       icon="pi pi-sort"
       label="For colour"
       class="m-1 p-button-help col-10 sm:col-8 md:col-3 lg:col-2"
+      (click)="changeOrder('colour')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="grid">
   <div class="col mt-2">
-    <p-table [value]="heroes | order" [tableStyle]="{ 'min-width': '280px' }">
+    <p-table [value]="heroes | order : orderBy" [tableStyle]="{ 'min-width': '280px' }">
       <ng-template pTemplate="header">
         <tr>
           <th class="col md:col-12">Name</th>
