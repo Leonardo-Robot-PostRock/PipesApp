@@ -6,8 +6,6 @@ import { Heroe } from '../interfaces/ventas.interefaces';
 })
 export class OrderPipe implements PipeTransform {
   transform(heroes: Heroe[], orderBy: string = 'valueless'): Heroe[] {
-    console.log(orderBy);
-
     switch (orderBy) {
       case 'name':
         return heroes.sort((a, b) => (a.name > b.name ? 1 : -1));
