@@ -9,27 +9,22 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { CapitalLettersPipe } from './pipes/capitalLetters.pipe';
 import { FlyPipe } from './pipes/fly.pipe';
-
-
+import { OrderPipe } from './pipes/ordenar.pipe';
 
 @NgModule({
   declarations: [
+    //components
     NumerosComponent,
     NoComunesComponent,
     BasicosComponent,
     OrdenarComponent,
+
+    //pipes
     CapitalLettersPipe,
-    FlyPipe
+    FlyPipe,
+    OrderPipe
   ],
-  exports:[
-    NumerosComponent,
-    NoComunesComponent,
-    BasicosComponent,
-    OrdenarComponent
-  ],
-  imports: [
-    PrimeNgModule,
-    CommonModule
-  ]
+  exports: [NumerosComponent, NoComunesComponent, BasicosComponent, OrdenarComponent],
+  imports: [PrimeNgModule, CommonModule]
 })
-export class VentasModule { }
+export class VentasModule {}
