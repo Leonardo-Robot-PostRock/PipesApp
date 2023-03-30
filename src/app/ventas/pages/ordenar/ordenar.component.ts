@@ -14,27 +14,27 @@ export class OrdenarComponent {
     {
       name: 'Superman',
       fly: true,
-      colour: Colour.azul
+      colour: Colour.blue
     },
     {
       name: 'Batman',
       fly: false,
-      colour: Colour.negro
+      colour: Colour.black
     },
     {
       name: 'Robin',
       fly: false,
-      colour: Colour.verde
+      colour: Colour.green
     },
     {
       name: 'Daredevil',
       fly: false,
-      colour: Colour.rojo
+      colour: Colour.red
     },
     {
       name: 'Linterna Verde',
       fly: true,
-      colour: Colour.verde
+      colour: Colour.green
     }
   ];
 
@@ -42,7 +42,7 @@ export class OrdenarComponent {
     this.inCapitalLetter = !this.inCapitalLetter;
   }
 
-  changeOrder(value: string){
+  changeOrder(value: string) {
     this.orderBy = value;
   }
 }
